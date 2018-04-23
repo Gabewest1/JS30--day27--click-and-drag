@@ -4,9 +4,15 @@ export default class HorizontalScroller extends React.Component {
     state = { mouseStart: 0, isMouseDown: false }
     
     render() {
+        let className = "scroll-container"
+
+        if (this.state.isMouseDown) {
+            className += " active"
+        }
+
         return (
             <div 
-                className="scroll-container"
+                className={ className }
                 onMouseDown={ this._handleMouseDown }
                 ref={ el => this.scroller = el }
             >   
