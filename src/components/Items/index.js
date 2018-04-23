@@ -5,8 +5,8 @@ export default props => {
     const { numItems } = props
     const Items = [] 
 
-    for (var i = 1; i =< numItems; i++) {
-        items.push(<Item key={ i }>{ i }</Item>)
+    for (var i = 1; i <= numItems; i++) {
+        Items.push(<Item key={ i }>{ i }</Item>)
     }
 
     return <div className="items">{ Items }</div>
